@@ -22,9 +22,8 @@ public class Person {
     }
 
     public Person(String name) {
-
         this.name = name;
-
+        this.email = email;
     }
 
     public String getName() {
@@ -35,6 +34,7 @@ public class Person {
     public void setName(String name) {
         this.name = name;
     }
+    public void setEmail(String email) {this.email = email;}
 
     // TODO (Activity 3): add the "email" field and its getter here.
 
