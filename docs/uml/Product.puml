@@ -33,7 +33,22 @@ class ProductController {
     + search(name : String) : List<Product>
 }
 
+class DigitalProduct {
+- downloadUrl : String
+- fileSizeMB : double
++ getDownloadUrl() : String
+}
+class PhysicalProduct {
+- weightKg : double
+- dimensions : String
++ getWeightKg() : double
+}
+
 ProductController ..> ProductService
 ProductService --> Product
+
+' <|-- is the inheritance arrow. The PARENT goes on the left.
+Product <|-- DigitalProduct
+Product <|-- PhysicalProduct
 
 @enduml
